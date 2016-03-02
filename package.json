@@ -1,0 +1,15 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "backend.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deepstream.io": "^0.8.1",
+    "deepstream.io-client-js": "^0.4.0"
+  }
+}

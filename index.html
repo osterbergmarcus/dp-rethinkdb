@@ -1,0 +1,49 @@
+<html>
+<head>
+   <script src="node_modules/deepstream.io-client-js/dist/deepstream.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!--<script src="frontend.js"></script>-->
+</head>
+<body>
+<center>
+<div class="form">
+<div id="count"/>
+<form id="arr-form" autocomplete="off">
+<input type="text" id="data-input" class="input" required>
+</form>
+<ul id="list">
+</ul>
+</center>
+ 
+<script>
+//deepstream
+var ds = deepstream("localhost:6020").login();
+var record = ds.record.getRecord("testRecord/" + ds.getUid());
+
+
+var dataList = document.querySelector("#list");
+var arrForm = document.querySelector("#arr-form");
+
+
+arrForm.addEventListener('submit', event => {
+  event.preventDefault();
+  var inputValue = document.querySelector("#data-input").value
+  record.set({ text: inputValue.trim() });
+  arrForm.reset();
+})
+
+// info.subscribe('test', function(value) {
+//   console.log('Record updated' + value)
+//   //dataList.innerHTML += `<li> ${value} </li>`;
+// });
+record.subscribe(function(data){
+  dataList.innerHTML += `<li> ${data.text} </li>`;
+  console.log(data);
+});
+   
+
+</script>
+</body>
+<footer>
+</footer>
+</html>
