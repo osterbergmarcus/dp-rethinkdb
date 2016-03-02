@@ -32,10 +32,7 @@ arrForm.addEventListener('submit', event => {
   arrForm.reset();
 })
 
-// info.subscribe('test', function(value) {
-//   console.log('Record updated' + value)
-//   //dataList.innerHTML += `<li> ${value} </li>`;
-// });
+
 record.subscribe(function(data){
   dataList.innerHTML += `<li> ${data.text} </li>`;
   console.log(data);
