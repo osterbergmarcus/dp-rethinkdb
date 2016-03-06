@@ -2,8 +2,10 @@
 ## Realtime using [deepstream.io](https://deepstream.io/) and [rethinkDB](http://www.rethinkdb.com/)
 
 ### Installation
+```javascript
   $ brew update && brew install rethinkdb
-	$ npm install
+  $ npm install
+```
 
 ### Usage
 ```javascript
