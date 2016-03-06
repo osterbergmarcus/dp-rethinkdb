@@ -1,2 +1,17 @@
-#add to rethinkDB data explorer to watch changes
-r.db("deepstream").table("testRecord").changes()
+# dp-rethinkdb
+## Realtime using [deepstream.io](https://deepstream.io/) and [rethinkDB](http://www.rethinkdb.com/)
+
+### Installation
+  $ brew update && brew install rethinkdb
+	$ npm install
+
+### Usage
+```javascript
+  $ rethinkdb
+  $ node server/server.js
+  $ gulp webserver
+```
+
+## Contact
+* [twitter](http://www.twitter.com/osterbergmarcus)
+* http://marcusosterberg.com

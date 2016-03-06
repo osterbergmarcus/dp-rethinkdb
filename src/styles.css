@@ -9,6 +9,9 @@ body {
   font-size: 1em;
 }
 
+li {
+  text-align: left;
+}
 
 ul {
  padding-left: 30%;
